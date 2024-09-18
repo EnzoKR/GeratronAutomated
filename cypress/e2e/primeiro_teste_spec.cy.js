@@ -1,5 +1,6 @@
 describe('Teste de geração de senha', () => {
   beforeEach(() => {
+    // cy.visit é usado para "visitar" sites ou arquivos no localhost 
     cy.visit('http://localhost/geratron/src/view/generator.html');
   });
 
@@ -23,7 +24,7 @@ describe('Teste de geração de senha', () => {
     });
   });
 
-  
+  // utilizando comandos customizados (support -> commands.js)
 
   it('Usando Commands, desmarca checkbox de números e verifica a nova senha', () => {
     cy.VerificaSenha('#numbers', /\d/);  
