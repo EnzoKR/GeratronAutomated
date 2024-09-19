@@ -12,4 +12,19 @@ Você pode acessar o repositório do Geratron no GitHub através do seguinte lin
 
 [https://github.com/thiagowaib/geratron.git](https://github.com/thiagowaib/geratron.git)
 
+## Executando o Cypress
+
+### Clonar o repositório
+git clone https://github.com/usuario/nome-repositorio.git
+cd nome-repositorio
+### Instalar dependências com npm
+npm install
+###Instalar Cypress
+npm install cypress --save-dev
+### Abrir Cypress
+npx cypress open
+### Executar testes sem interface
+npx cypress run
+
+
 
