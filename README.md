@@ -12,7 +12,7 @@ Você pode acessar o repositório do Geratron no GitHub através do seguinte lin
 
 [https://github.com/thiagowaib/geratron.git](https://github.com/thiagowaib/geratron.git)
 
-##Requisitos
+## Requisitos
 - ter o Node.Js  instalado,  na versão 12 ou acima 
 - ter o projeto Geratron clonado e executar no localhost 
 
@@ -21,12 +21,13 @@ Você pode acessar o repositório do Geratron no GitHub através do seguinte lin
 
 ### Clonar o repositório
 git clone https://github.com/usuario/nome-repositorio.git
+
 cd nome-repositorio
 ### Alterar o comando "cy.visit"
 no arquivo “primeiro_teste_spec.cy.js” encontre o comando "cy.visit", alterando o  local do projeto Geratron com o endereço no localhost
 ### Instalar dependências com npm
 npm install
-###Instalar Cypress
+### Instalar Cypress
 npm install cypress --save-dev
 ### Abrir Cypress
 npx cypress open
