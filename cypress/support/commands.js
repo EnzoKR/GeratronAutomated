@@ -38,7 +38,7 @@ Cypress.Commands.add("VerificaSenha", (token, vari) => {
     // Guardar o valor da senha gerada
     cy.get('#inpPassword').invoke('val').then((senhaInicial) => {
 
-        cy.get(token).uncheck(); // Desmarcar checkbox de números
+        cy.get(token).click(); // Desmarcar checkbox de números
         //cy.get('img').click();
 
         // Guardar a nova senha

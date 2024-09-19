@@ -26,16 +26,24 @@ describe('Teste de geração de senha', () => {
 
   // utilizando comandos customizados (support -> commands.js)
 
-  it('Usando Commands, desmarca checkbox de números e verifica a nova senha', () => {
+  it('Desmarca números e verifica a nova senha', () => {
     cy.VerificaSenha('#numbers', /\d/);  
   });
 
-  it('Usando Commands, desmarca checkbox de Letras Minúsculas e verifica a nova senha', () => {
+  it('Desmarca Letras Minúsculas e verifica a nova senha', () => {
     cy.VerificaSenha('#minor', /[a-z]/);  
   });
 
-  it('Usando Commands, desmarca checkbox de Letras Maiúsculas e verifica a nova senha', () => {
+  it('Desmarca Letras Maiúsculas e verifica a nova senha', () => {
     cy.VerificaSenha('#major', /[A-Z]/);  
   });
+
+  it('Desmarca Caracteres Especiais e verifica a nova senha', () => {
+    cy.VerificaSenha('#symbols', (/[!@#$%&*()\/\-\_\[\]=+><]/));  
+  });
+
+  it('Desmarca a opçao Tira caracteres confusos: Il1, o0O e verifica a nova senha', () => {
+    cy.VerificaSenha('#rdStyle-2', /[Il10oO]/);  
+  }); 
 
 });
