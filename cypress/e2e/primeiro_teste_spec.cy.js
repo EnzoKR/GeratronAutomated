@@ -1,6 +1,6 @@
 describe('Teste de geração de senha', () => {
   beforeEach(() => {
-    // cy.visit é usado para "visitar" sites ou arquivos no localhost 
+    // cy.visit é usado para "visita" sites ou arquivos no localhost 
     cy.visit('http://localhost/geratron/src/view/generator.html');
   });
 
@@ -22,6 +22,15 @@ describe('Teste de geração de senha', () => {
         expect(novaSenha).to.not.match(regexNumeros);
       });
     });
+  });
+
+  // Altera a quantidade de caracteres para gerar a senha
+  it('Altera a quantidade de caracteres e verifica o valor', () => {
+    // Selecionar o input de range e alterar o valor
+    cy.get('#inpCount').invoke('val', 32).trigger('input'); // Define o valor como 32 e aciona o evento 'input'
+
+    // Verifica se o valor foi atualizado no span correspondente
+    cy.get('#range-value').should('contain', '= 32');
   });
 
   // utilizando comandos customizados (support -> commands.js)
